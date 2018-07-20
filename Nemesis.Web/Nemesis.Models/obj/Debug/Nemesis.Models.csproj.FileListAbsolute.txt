@@ -1,0 +1,5 @@
+c:\Users\lenovo pc\source\repos\Nemesis.Web\Nemesis.Models\bin\Debug\Nemesis.Models.dll
+c:\Users\lenovo pc\source\repos\Nemesis.Web\Nemesis.Models\bin\Debug\Nemesis.Models.pdb
+c:\Users\lenovo pc\source\repos\Nemesis.Web\Nemesis.Models\obj\Debug\Nemesis.Models.csproj.CoreCompileInputs.cache
+c:\Users\lenovo pc\source\repos\Nemesis.Web\Nemesis.Models\obj\Debug\Nemesis.Models.dll
+c:\Users\lenovo pc\source\repos\Nemesis.Web\Nemesis.Models\obj\Debug\Nemesis.Models.pdb
