@@ -13,6 +13,9 @@
     <form id="form1" runat="server">
         <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 logo-image">
+                <img src="../Content/Images/nemesis-logo.jpg" />
+            </div>
             <div class="login-mainform form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
                 <div class="title">
                     <span>Please Sign In</span>
