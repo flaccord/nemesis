@@ -30,23 +30,156 @@ textarea {
     float: right;
 }
 
-.navbar-inverse {
-    background: #5DB85B !important;
+.card-body {
+    cursor: pointer;
 }
-    .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
-        color: white;
-    }
 
-    .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-        background-color: #5DB85B !important;
+.navbar-nav > li {
+    display: block;
+    width: 100%;
+}
+
+.custom-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+@media (min-width: 1200px) {
+    .custom-container {
+        width: 1315px;
     }
-    /* Responsive: Portrait tablets and up */
-    @media screen and (min-width: 768px) {
-        .jumbotron {
+}
+
+#main-body {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar, .navbar-inverse {
+    background-color: rgba(6, 66,109,0.88);
+}
+
+#sidebar {
+    position: fixed;
+    width: 225px;
+    height: 100%;
+    z-index: 1;
+}
+
+#main-content {
+    padding-left: 240px;
+    z-index: 0;
+}
+
+.navbar-inverse {
+    border-color: #0069B3;
+}
+
+.nav > li > a:hover {
+    background-color: rgba(12, 55, 86, 0.88);
+    color: white;
+}
+
+.mobile-view {
+    display: none !important;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: 225px;
+}
+
+.navbar-brand {
+    height: 50px !important;
+    padding: 0px !important;
+}
+
+.navbar .custom-container {
+    padding-left: 0px;
+    width: 100%;
+}
+
+h1.dash-header {
+    margin-bottom: 45px;
+}
+
+
+
+.navbar-nav > li > a {
+    padding-left: 45px;
+    color: white;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: transparent !important;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
         margin-top: 20px;
     }
 
     .body-content {
         padding: 0;
+    }
+
+    .mobile-view {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 441px) {
+    #chLine {
+        width: 320px !important;
+    }
+
+    .mobile-view {
+        display: block !important;
+    }
+
+    .desktop-view {
+        display: none !important;
+    }
+
+    .navbar-nav > li > a {
+        padding-left: 15px;
+    }
+
+    .body-content {
+        padding: 0px;
+    }
+
+    .navbar-collapse {
+        padding: 0px 15px;
+    }
+
+    #sidebar {
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width: auto;
+        background-color: rgba(6, 66,109,0.88);
+    }
+
+    #main-content {
+        padding-left: 15px;
+    }
+
+    .navbar-brand img {
+        height: 51px;
+        width: 150px;
+    }
+
+    h1.dash-header {
+        margin-bottom: 45px;
+        font-size: 25px;
+        font-weight: 700;
     }
 }
