@@ -18,7 +18,7 @@
             </div>
             <div class="login-mainform form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
                 <div class="title">
-                    <span>Please Sign In</span>
+                    <span>Inicia Sesión</span>
                 </div>
                 <div class="login-section">
                     <div class="email-section mgb-10">
@@ -30,7 +30,7 @@
                         <label id="passwordValidation" runat="server" class="field-validation-error"></label>
                     </div>
                     <div class="submit">
-                        <asp:Button runat="server" Text="Login" CssClass="btn btn-primary" OnClick="Login_Click"/>
+                        <asp:Button runat="server" Text="Enviar" CssClass="btn btn-primary" OnClick="Login_Click"/>
                     </div>
                 </div>
             </div>
