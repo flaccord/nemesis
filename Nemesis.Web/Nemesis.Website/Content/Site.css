@@ -127,6 +127,18 @@ h1.dash-header {
     height: 50px;
 }
 
+.sexo-info label {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 100;
+}
+
+.inl-blk {
+    display: inline-block !important;
+}
+
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
     background-color: transparent !important;
 }
