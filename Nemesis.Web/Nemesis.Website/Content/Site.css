@@ -39,6 +39,28 @@ textarea {
     width: 100%;
 }
 
+.pd10 {
+    padding: 0px 10px !important;
+}
+
+table.dataTable tbody td {
+    padding: 8px 0px !important;
+}
+
+.color-section {
+    font-size:15px;
+    font-weight: 600;
+}
+
+td.center {
+    text-align: center;
+}
+
+#capturas_table_length, .dataTables_filter {
+    display: none;
+}
+
+
 .custom-container {
     padding-right: 15px;
     padding-left: 15px;
@@ -139,6 +161,56 @@ h1.dash-header {
     display: inline-block !important;
 }
 
+.search-codigo {
+    display: block;
+}
+
+.panel-heading a {
+    display:block;
+    color: black;
+    font-weight: bold;
+}
+
+    .panel-heading a:hover, .panel-heading a:focus {
+        text-decoration: none;
+    }
+
+.g-recaptcha div {
+    margin: 0 auto;
+}
+
+#Solicitud_form {
+    margin-bottom: 40px;
+}
+
+span.dtr-title {
+    font-weight: bold;
+}
+
+tr.child td.child ul.dtr-details {
+    list-style: none;
+}
+
+label.anchor {
+    color: #337ab7;
+    cursor: pointer;
+    font-weight:100;
+}
+
+span.error {
+    color: red;
+}
+
+.azul {
+    background-color: #1D628A;
+}
+.verde {
+    background-color: #0E844F;
+}
+.amarilio {
+    background-color: #F1C340;
+}
+
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
     background-color: transparent !important;
 }
@@ -207,5 +279,9 @@ h1.dash-header {
     }
     #top-header {
         padding: 10px 20px;
+    }
+
+    #MainContent_codigo_postal {
+        width: 82%;
     }
 }

@@ -27,13 +27,13 @@ namespace Nemesis.Website.SystemUser
             passwordValidation.InnerText = "";
             if (email.Value == "")
             {
-                emailValidation.InnerText = "Email is Required";
+                emailValidation.InnerText = "Usuario es requerido.";
                 email.Attributes.Add("class", "form-control input-validation-error");
                 valid = false;
             }
             if (password.Value == "")
             {
-                passwordValidation.InnerText = "Password is Required";
+                passwordValidation.InnerText = "Contraseña es requerida.";
                 password.Attributes.Add("class", "form-control input-validation-error");
                 valid = false;
             }

@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Solicitud.aspx.cs" Inherits="Nemesis.Website.SystemUser.Dashboard" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
@@ -8,15 +9,16 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="col-lg-12 col-md-12 col-sm-12" id="Solicitud_form">
+                <%--Datos Generales--%>
                 <div class="panel panel-default">
                     <div class="panel-heading"><a href="#datos_generales" data-toggle="collapse">Datos Generales</a></div>
-                    <div class="panel-body panel-collapse collapse" id="datos_generales">
+                    <div class="panel-body panel-collapse collapse in" id="datos_generales">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label>Primer Number *</label>
+                                <label for="primer_number">Primer Number *</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
-                                     <asp:TextBox CssClass="form-control" ID="primer_number" runat="server" placeholder="Juan"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="primer_number" runat="server" placeholder="Juan"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
@@ -45,7 +47,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                 <label>Sexo *</label>
                                 <asp:RadioButtonList runat="server" ID="sexo_selection" CssClass="sexo-info" RepeatDirection="Horizontal">
-                                    <asp:ListItem>Masculino</asp:ListItem>
+                                    <asp:ListItem Selected="True">Masculino</asp:ListItem>
                                     <asp:ListItem>Femenino</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
@@ -61,13 +63,10 @@
                                     <asp:DropDownList ID="birthMonth" runat="server" CssClass="form-control inl-blk">
                                     </asp:DropDownList>
                                 </div>
-                                 <div class="col-lg-3 col-md-3 col-xs-3 inl-blk nopadding">
+                                <div class="col-lg-3 col-md-3 col-xs-3 inl-blk nopadding">
                                     <asp:DropDownList ID="birthYear" runat="server" CssClass="form-control inl-blk">
                                     </asp:DropDownList>
                                 </div>
-
-                                    
-
                             </div>
                         </div>
 
@@ -102,7 +101,364 @@
                         </div>
                     </div>
                 </div>
+
+                <%--Empleo section--%>
+                <div class="panel panel-default">
+                    <div class="panel-heading"><a href="#empleo" data-toggle="collapse">Empleo</a></div>
+                    <div class="panel-body panel-collapse collapse in" id="empleo">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Tipo Empleo *</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:DropDownList ID="tipo_empleo" runat="server" CssClass="form-control inl-blk">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-xs-12 form-group">
+                                <div>
+                                    <label>Fecha de Ingreso *</label>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-xs-3 inl-blk nopadding">
+                                    <asp:DropDownList ID="ingreso_day" runat="server" CssClass="form-control inl-blk">
+                                    </asp:DropDownList>
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-xs-5 inl-blk">
+                                    <asp:DropDownList ID="ingreso_month" runat="server" CssClass="form-control inl-blk">
+                                    </asp:DropDownList>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-xs-3 inl-blk nopadding">
+                                    <asp:DropDownList ID="ingreso_year" runat="server" CssClass="form-control inl-blk">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Ingreso Mensual *</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:TextBox CssClass="form-control" ID="ingreso_mensual" runat="server" placeholder="Ingreso Mensual"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Gasto Mensual</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:TextBox CssClass="form-control" ID="gasto_mensual" runat="server" placeholder="Gasto Mensual"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <%--Direcclon--%>
+                <div class="panel panel-default">
+                    <div class="panel-heading"><a href="#dlrecclon" data-toggle="collapse">Dlrecclon</a></div>
+                    <div class="panel-body panel-collapse collapse in" id="dlrecclon">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                <label>Calle *</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:TextBox CssClass="form-control" ID="calle" runat="server" placeholder="Calle"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Codigo Postal *</label>
+                                <div class="input-group custom-search-form search-codigo">
+                                    <asp:TextBox CssClass="form-control" ID="codigo_postal" runat="server" placeholder="Codigo Postal"></asp:TextBox>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Numero Exterior</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:TextBox CssClass="form-control" ID="numero_exterior" runat="server" placeholder="Numero Exterior"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Numero Interior</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:TextBox CssClass="form-control" ID="numero_interior" runat="server" placeholder="Numero Interior"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Manzana</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:TextBox CssClass="form-control" ID="manzana" runat="server" placeholder="manzana"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Lote</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:TextBox CssClass="form-control" ID="lote" runat="server" placeholder="lote"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Colonia *</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:DropDownList ID="Colonia" runat="server" CssClass="form-control inl-blk">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Municipio *</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:DropDownList ID="municipio" runat="server" CssClass="form-control inl-blk">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Ciudada *</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:DropDownList ID="Ciudada" runat="server" CssClass="form-control inl-blk">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Estado *</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:DropDownList ID="Estado" runat="server" CssClass="form-control inl-blk">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Antiguedad Domicilio *</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:DropDownList ID="antiguedad_domicilio" runat="server" CssClass="form-control inl-blk">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Tipo Vivienda *</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:DropDownList ID="tipo_vivienda" runat="server" CssClass="form-control inl-blk">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <%--Opciones de consulta buro de credito--%>
+                <div class="panel panel-default">
+                    <div class="panel-heading"><a href="#burode_credito" data-toggle="collapse">Opciones de consulta buro de credito</a></div>
+                    <div class="panel-body panel-collapse collapse in" id="burode_credito">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Tipo De Consulta *</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:RadioButtonList runat="server" ID="tipode_consulta" CssClass="sexo-info" RepeatDirection="Horizontal">
+                                        <asp:ListItem>Consulta Tradicional</asp:ListItem>
+                                        <asp:ListItem Selected="True">Consulta Con Autenticacion</asp:ListItem>
+                                    </asp:RadioButtonList>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-xs-12 form-group">
+                                <div>
+                                    <label>Cuenta Con Tarjeta De Credito? *</label>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:RadioButtonList runat="server" ID="tarjetade_credito" CssClass="sexo-info" RepeatDirection="Horizontal">
+                                        <asp:ListItem>SI</asp:ListItem>
+                                        <asp:ListItem Selected="True">NO</asp:ListItem>
+                                    </asp:RadioButtonList>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-xs-12 form-group">
+                                <div>
+                                    <label>Ultimos 4 Digitos De la Trajeta *</label>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:TextBox CssClass="form-control" ID="Digitosdela_trajeta" runat="server" placeholder="4 Digits"></asp:TextBox>                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Ha Ejercido Un Credito Hipotecario? *</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:RadioButtonList runat="server" ID="credito_hipotecario" CssClass="sexo-info" RepeatDirection="Horizontal">
+                                        <asp:ListItem>SI</asp:ListItem>
+                                        <asp:ListItem Selected="True">NO</asp:ListItem>
+                                    </asp:RadioButtonList>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>Ha Ejercido Un Credito Automotriz En Los Ultimos 24 Meses? *</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                    <asp:RadioButtonList runat="server" ID="credito_automotriz" CssClass="sexo-info" RepeatDirection="Horizontal">
+                                        <asp:ListItem>SI</asp:ListItem>
+                                        <asp:ListItem Selected="True">NO</asp:ListItem>
+                                    </asp:RadioButtonList>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <%--Referencias Familiares--%>
+                <div class="panel panel-default">
+                    <div class="panel-heading"><a href="#referencias_familiares" data-toggle="collapse">Referencias Familiares</a></div>
+                    <div class="panel-body panel-collapse collapse in" id="referencias_familiares">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>NOMBRE</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="nombre_familiar_1" runat="server" placeholder="Nombre Familiar"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Relacion</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="relacion_familiar_1" runat="server" placeholder="Relacion Familiar"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Hora</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="hora_familiar_1" runat="server" placeholder="Hora"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Cel</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="cel_familiar_1" runat="server" placeholder="Celular"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Fijo</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="fijo_familiar_1" runat="server" placeholder="Tel Fijo"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>NOMBRE</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="nombre_familiar_2" runat="server" placeholder="Nombre Familiar"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Relacion</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="relacion_familiar_2" runat="server" placeholder="Relacion Familiar"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Hora</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="hora_familiar_2" runat="server" placeholder="Hora"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Cel</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="cel_familiar_2" runat="server" placeholder="Celular"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Fijo</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="Fijo_familiar_2" runat="server" placeholder="Tel Fijo"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <%--Referencias Non Familiares--%>
+                <div class="panel panel-default">
+                    <div class="panel-heading"><a href="#referenciasnon_familiares" data-toggle="collapse">Referencias Non Familiares</a></div>
+                    <div class="panel-body panel-collapse collapse in" id="referenciasnon_familiares">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>NOMBRE</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="nombre_nonfamiliar_1" runat="server" placeholder="Nombre No Familiar"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Relacion</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="relacion_nonfamiliar_1" runat="server" placeholder="Relacion No Familiar"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Hora</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="hora_nonfamiliar_1" runat="server" placeholder="Hora"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Cel</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="cel_nonfamiliar_1" runat="server" placeholder="Celular"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Fijo</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="fijo_nonfamiliar_1" runat="server" placeholder="Tel Fijo"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>NOMBRE</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="nombre_nonfamiliar_2" runat="server" placeholder="Nombre Familiar"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Relacion</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="relacion_nonfamiliar_2" runat="server" placeholder="Relacion Familiar"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Hora</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="hora_nonfamiliar_2" runat="server" placeholder="Hora"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Cel</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="cel_nonfamiliar_2" runat="server" placeholder="Celular"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                                <label>Fijo</label>
+                                <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                     <asp:TextBox CssClass="form-control" ID="fijo_nonfamiliar_2" runat="server" placeholder="Tel Fijo"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="align-center">
+                    <div class="g-recaptcha" data-sitekey="6Lee5mYUAAAAAAEXFbrqvOAp2rJjWMKiTGbHMKtK"></div>
+                </div>
             </div>
+            
         </div>
     </div>
 </asp:Content>

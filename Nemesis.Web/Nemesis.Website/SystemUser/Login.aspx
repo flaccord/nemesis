@@ -22,7 +22,7 @@
                 </div>
                 <div class="login-section">
                     <div class="email-section mgb-10">
-                        <input type="email" id="email" placeholder="Usuario*" runat="server" class="form-control"/>
+                        <input type="email" id="email" placeholder="Usuario" runat="server" class="form-control"/>
                         <label id="emailValidation" runat="server" class="field-validation-error"></label>
                     </div>
                     <div class="password-section mgb-10">

@@ -16,6 +16,14 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="../Content/Site.css" rel="stylesheet" />
+    <%--data tables links--%>
+    <link rel="text/css" href="https://editor.datatables.net/extensions/Editor/css/editor.dataTables.min.css" />
+    <link rel="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+    <link rel="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" />
+    <link rel="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css" />
+    <link rel="text/css" href="https://cdn.datatables.net/select/1.2.6/css/select.dataTables.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
     <script src="../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../Scripts/Chart.bundle.js"></script>
     <script src="../Scripts/Chart.js"></script>

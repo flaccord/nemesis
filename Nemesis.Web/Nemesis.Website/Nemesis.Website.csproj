@@ -196,8 +196,12 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="SystemUser\Capturas.aspx" />
     <Content Include="SystemUser\Dashboard.aspx" />
+    <Content Include="SystemUser\Detalleconsultas.aspx" />
+    <Content Include="SystemUser\hello.aspx" />
     <Content Include="SystemUser\Login.aspx" />
+    <Content Include="SystemUser\Solicitud.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -245,6 +249,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="SystemUser\Capturas.aspx.cs">
+      <DependentUpon>Capturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemUser\Capturas.aspx.designer.cs">
+      <DependentUpon>Capturas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SystemUser\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -252,12 +263,26 @@
     <Compile Include="SystemUser\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SystemUser\Detalleconsultas.aspx.cs">
+      <DependentUpon>Detalleconsultas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemUser\Detalleconsultas.aspx.designer.cs">
+      <DependentUpon>Detalleconsultas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SystemUser\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SystemUser\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser\Solicitud.aspx.cs">
+      <DependentUpon>Solicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemUser\Solicitud.aspx.designer.cs">
+      <DependentUpon>Solicitud.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
