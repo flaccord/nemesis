@@ -78,7 +78,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label>Telefono Fijo *</label>
+                                <label>Teléfono Fijo *</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                     <asp:TextBox CssClass="form-control" ID="telefono_fijo" runat="server" placeholder="54885456465"></asp:TextBox>
                                 </div>
@@ -136,13 +136,13 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                 <label>Ingreso Mensual *</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
-                                    <asp:TextBox CssClass="form-control" ID="ingreso_mensual" runat="server" placeholder="Ingreso Mensual"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="ingreso_mensual" runat="server" placeholder="12300"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                 <label>Gasto Mensual</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
-                                    <asp:TextBox CssClass="form-control" ID="gasto_mensual" runat="server" placeholder="Gasto Mensual"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="gasto_mensual" runat="server" placeholder="8500"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -151,21 +151,21 @@
 
                 <%--Direcclon--%>
                 <div class="panel panel-default">
-                    <div class="panel-heading"><a href="#dlrecclon" data-toggle="collapse">Dlrecclon</a></div>
-                    <div class="panel-body panel-collapse collapse in" id="dlrecclon">
+                    <div class="panel-heading"><a href="#dlrecclon" data-toggle="collapse">Dirección</a></div>
+                    <div class="panel-body panel-collapse collapse in" id="direccion">
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                 <label>Calle *</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
-                                    <asp:TextBox CssClass="form-control" ID="calle" runat="server" placeholder="Calle"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="calle" runat="server" placeholder="Av. del Iman"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label>Codigo Postal *</label>
+                                <label>Código Postal *</label>
                                 <div class="input-group custom-search-form search-codigo">
-                                    <asp:TextBox CssClass="form-control" ID="codigo_postal" runat="server" placeholder="Codigo Postal"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="codigo_postal" runat="server" placeholder="11000"></asp:TextBox>
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" type="button">
                                             <i class="fa fa-search"></i>
@@ -176,15 +176,15 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label>Numero Exterior</label>
+                                <label>Número Exterior</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
-                                    <asp:TextBox CssClass="form-control" ID="numero_exterior" runat="server" placeholder="Numero Exterior"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="numero_exterior" runat="server" placeholder="151"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label>Numero Interior</label>
+                                <label>Número Interior</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
-                                    <asp:TextBox CssClass="form-control" ID="numero_interior" runat="server" placeholder="Numero Interior"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="numero_interior" runat="server" placeholder="4B"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -192,13 +192,13 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                 <label>Manzana</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
-                                    <asp:TextBox CssClass="form-control" ID="manzana" runat="server" placeholder="manzana"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="manzana" runat="server" placeholder="6"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                 <label>Lote</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
-                                    <asp:TextBox CssClass="form-control" ID="lote" runat="server" placeholder="lote"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="lote" runat="server" placeholder="3"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -220,7 +220,7 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label>Ciudada *</label>
+                                <label>Ciudad *</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                     <asp:DropDownList ID="Ciudada" runat="server" CssClass="form-control inl-blk">
                                     </asp:DropDownList>
@@ -236,14 +236,14 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label>Antiguedad Domicilio *</label>
+                                <label>Antigüedad en el Domicilio *</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                     <asp:DropDownList ID="antiguedad_domicilio" runat="server" CssClass="form-control inl-blk">
                                     </asp:DropDownList>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label>Tipo Vivienda *</label>
+                                <label>Tipo de Vivienda *</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                     <asp:DropDownList ID="tipo_vivienda" runat="server" CssClass="form-control inl-blk">
                                     </asp:DropDownList>
@@ -263,18 +263,18 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                     <asp:RadioButtonList runat="server" ID="tipode_consulta" CssClass="sexo-info" RepeatDirection="Horizontal">
                                         <asp:ListItem>Consulta Tradicional</asp:ListItem>
-                                        <asp:ListItem Selected="True">Consulta Con Autenticacion</asp:ListItem>
+                                        <asp:ListItem Selected="True">Consulta con Autenticacion</asp:ListItem>
                                     </asp:RadioButtonList>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-xs-12 form-group">
                                 <div>
-                                    <label>Cuenta Con Tarjeta De Credito? *</label>
+                                    <label>¿Cuenta con Tarjeta de Credito? *</label>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                     <asp:RadioButtonList runat="server" ID="tarjetade_credito" CssClass="sexo-info" RepeatDirection="Horizontal">
-                                        <asp:ListItem>SI</asp:ListItem>
-                                        <asp:ListItem Selected="True">NO</asp:ListItem>
+                                        <asp:ListItem>Sí</asp:ListItem>
+                                        <asp:ListItem Selected="True">No</asp:ListItem>
                                     </asp:RadioButtonList>
                                 </div>
                             </div>
@@ -282,29 +282,29 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-xs-12 form-group">
                                 <div>
-                                    <label>Ultimos 4 Digitos De la Trajeta *</label>
+                                    <label>Últimos 4 Dígitos de la Trajeta *</label>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
-                                    <asp:TextBox CssClass="form-control" ID="Digitosdela_trajeta" runat="server" placeholder="4 Digits"></asp:TextBox>                                    
+                                    <asp:TextBox CssClass="form-control" ID="Digitosdela_trajeta" runat="server" placeholder="4567"></asp:TextBox>                                    
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label>Ha Ejercido Un Credito Hipotecario? *</label>
+                                <label>¿Ha Ejercido Un Credito Hipotecario? *</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                     <asp:RadioButtonList runat="server" ID="credito_hipotecario" CssClass="sexo-info" RepeatDirection="Horizontal">
-                                        <asp:ListItem>SI</asp:ListItem>
-                                        <asp:ListItem Selected="True">NO</asp:ListItem>
+                                        <asp:ListItem>Sí</asp:ListItem>
+                                        <asp:ListItem Selected="True">No</asp:ListItem>
                                     </asp:RadioButtonList>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label>Ha Ejercido Un Credito Automotriz En Los Ultimos 24 Meses? *</label>
+                                <label>Ha Ejercido un Crédito Automotriz en los Últimos 24 Meses? *</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                     <asp:RadioButtonList runat="server" ID="credito_automotriz" CssClass="sexo-info" RepeatDirection="Horizontal">
-                                        <asp:ListItem>SI</asp:ListItem>
-                                        <asp:ListItem Selected="True">NO</asp:ListItem>
+                                        <asp:ListItem>Sí</asp:ListItem>
+                                        <asp:ListItem Selected="True">No</asp:ListItem>
                                     </asp:RadioButtonList>
                                 </div>
                             </div>
@@ -318,7 +318,7 @@
                     <div class="panel-body panel-collapse collapse in" id="referencias_familiares">
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-12 form-group">
-                                <label>NOMBRE</label>
+                                <label>Nombre</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                      <asp:TextBox CssClass="form-control" ID="nombre_familiar_1" runat="server" placeholder="Nombre Familiar"></asp:TextBox>
                                 </div>
@@ -336,7 +336,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-12 form-group">
-                                <label>Cel</label>
+                                <label>Celular</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                      <asp:TextBox CssClass="form-control" ID="cel_familiar_1" runat="server" placeholder="Celular"></asp:TextBox>
                                 </div>
@@ -350,7 +350,7 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-12 form-group">
-                                <label>NOMBRE</label>
+                                <label>Nombre</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                      <asp:TextBox CssClass="form-control" ID="nombre_familiar_2" runat="server" placeholder="Nombre Familiar"></asp:TextBox>
                                 </div>
@@ -368,7 +368,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-12 form-group">
-                                <label>Cel</label>
+                                <label>Celular</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                      <asp:TextBox CssClass="form-control" ID="cel_familiar_2" runat="server" placeholder="Celular"></asp:TextBox>
                                 </div>
@@ -385,19 +385,19 @@
 
                 <%--Referencias Non Familiares--%>
                 <div class="panel panel-default">
-                    <div class="panel-heading"><a href="#referenciasnon_familiares" data-toggle="collapse">Referencias Non Familiares</a></div>
+                    <div class="panel-heading"><a href="#referenciasnon_familiares" data-toggle="collapse">Referencias no Familiares</a></div>
                     <div class="panel-body panel-collapse collapse in" id="referenciasnon_familiares">
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-12 form-group">
-                                <label>NOMBRE</label>
+                                <label>Nombre</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
-                                     <asp:TextBox CssClass="form-control" ID="nombre_nonfamiliar_1" runat="server" placeholder="Nombre No Familiar"></asp:TextBox>
+                                     <asp:TextBox CssClass="form-control" ID="nombre_nonfamiliar_1" runat="server" placeholder="Nombre no Familiar"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-12 form-group">
-                                <label>Relacion</label>
+                                <label>Relación</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
-                                     <asp:TextBox CssClass="form-control" ID="relacion_nonfamiliar_1" runat="server" placeholder="Relacion No Familiar"></asp:TextBox>
+                                     <asp:TextBox CssClass="form-control" ID="relacion_nonfamiliar_1" runat="server" placeholder="Relación no Familiar"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-12 form-group">
@@ -407,7 +407,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-12 form-group">
-                                <label>Cel</label>
+                                <label>Celular</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                      <asp:TextBox CssClass="form-control" ID="cel_nonfamiliar_1" runat="server" placeholder="Celular"></asp:TextBox>
                                 </div>
@@ -421,15 +421,15 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-12 form-group">
-                                <label>NOMBRE</label>
+                                <label>Nombre</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                      <asp:TextBox CssClass="form-control" ID="nombre_nonfamiliar_2" runat="server" placeholder="Nombre Familiar"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-12 form-group">
-                                <label>Relacion</label>
+                                <label>Relación</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
-                                     <asp:TextBox CssClass="form-control" ID="relacion_nonfamiliar_2" runat="server" placeholder="Relacion Familiar"></asp:TextBox>
+                                     <asp:TextBox CssClass="form-control" ID="relacion_nonfamiliar_2" runat="server" placeholder="Relación no Familiar"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-12 form-group">
@@ -439,7 +439,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-12 form-group">
-                                <label>Cel</label>
+                                <label>Celular</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                      <asp:TextBox CssClass="form-control" ID="cel_nonfamiliar_2" runat="server" placeholder="Celular"></asp:TextBox>
                                 </div>
