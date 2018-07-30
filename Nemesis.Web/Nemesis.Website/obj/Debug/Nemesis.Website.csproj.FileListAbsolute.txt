@@ -169,8 +169,8 @@ E:\FiverrClients\Javier Nemesis\nemesis\Nemesis.Web\Nemesis.Website\bin\Microsof
 E:\FiverrClients\Javier Nemesis\nemesis\Nemesis.Web\Nemesis.Website\bin\Microsoft.AI.WindowsServer.xml
 E:\FiverrClients\Javier Nemesis\nemesis\Nemesis.Web\Nemesis.Website\bin\Microsoft.AI.Web.xml
 E:\FiverrClients\Javier Nemesis\nemesis\Nemesis.Web\Nemesis.Website\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\FiverrClients\Javier Nemesis\nemesis\Nemesis.Web\Nemesis.Website\obj\Debug\Nemesis.Website.csprojAssemblyReference.cache
 E:\FiverrClients\Javier Nemesis\nemesis\Nemesis.Web\Nemesis.Website\obj\Debug\Nemesis.Website.csproj.CoreCompileInputs.cache
 E:\FiverrClients\Javier Nemesis\nemesis\Nemesis.Web\Nemesis.Website\obj\Debug\Nemesis.Website.csproj.CopyComplete
 E:\FiverrClients\Javier Nemesis\nemesis\Nemesis.Web\Nemesis.Website\obj\Debug\Nemesis.Website.dll
 E:\FiverrClients\Javier Nemesis\nemesis\Nemesis.Web\Nemesis.Website\obj\Debug\Nemesis.Website.pdb
+E:\FiverrClients\Javier Nemesis\nemesis\Nemesis.Web\Nemesis.Website\obj\Debug\Nemesis.Website.csprojAssemblyReference.cache

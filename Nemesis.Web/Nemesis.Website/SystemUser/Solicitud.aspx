@@ -16,7 +16,7 @@
                     <div class="panel-body panel-collapse collapse in" id="datos_generales">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label for="primer_number">Primer Number *</label>
+                                <label for="primer_number">Primer Nombre *</label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                                     <asp:TextBox CssClass="form-control" ID="primer_number" runat="server" placeholder="Juan"></asp:TextBox>
                                 </div>

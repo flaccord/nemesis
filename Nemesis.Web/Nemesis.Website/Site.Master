@@ -99,7 +99,7 @@
                                 <a href="solicitud.aspx"><i class="fa fa-wpforms fa-fw"></i>Solicitud</a>
                             </li>
                             <li>
-                                <a href="capturas.html"><i class="fa fa-table fa-fw"></i>Capturas</a>
+                                <a href="capturas.aspx"><i class="fa fa-table fa-fw"></i>Capturas</a>
                             </li>
                             <li>
                                 <a href="reportebc.html"><i class="fa fa-files-o fa-fw"></i>Reportes BC</a>

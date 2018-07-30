@@ -20,6 +20,66 @@
             content: '+';
             background-color: #008CBA;
         }
+
+        .grid .datatable {
+            width: 100%;
+            border: none;
+            padding: 0px;
+            margin: 0px;
+            color: #333;
+        }
+
+            .grid .datatable th, .grid .datatable td {
+                padding: 6px 3px;
+                font-weight: bold;
+                text-align: left;
+                font-size: 10pt;
+                border-bottom: solid 1px #BDBDBD;
+                vertical-align: middle;
+                /*font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;*/
+            }
+
+        #gridviewSection tr td label {
+            font-weight: normal;
+        }
+
+        .main-grid {
+            padding: 15px;
+        }
+
+        .grid .datatable tr.even {
+            background-color: #F2F2F2;
+        }
+
+        .panel-body {
+            padding: 0px;
+        }
+
+        #puntos-section .panel-body {
+            padding: 10px 10px 35px 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: black;
+        }
+
+        #puntos-section {
+            margin: 0 auto;
+            width: 60%;
+        }
+
+        .common-puntos {
+            padding: 7px;
+            border-top: 1px solid #ddd;
+            /*border-bottom: 1px solid #ddd;*/
+        }
+
+            .common-puntos:nth-child(odd) {
+                margin-right: 30px;
+            }
+
+        .label-value {
+            float: right;
+        }
     </style>
     <div id="page-wrapper">
         <div class="row">
@@ -27,6 +87,68 @@
                 <h1 class="page-header">Solicitud de Informacion</h1>
             </div>
         </div>
+
+        <%--if single capturas details selected.--%>
+        <%if (referenceId != "")
+            {%>
+        <div class="col-lg-12 col-xs-12 col-md-12 nopadding">
+            <div id="puntos-section">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><a href="#Puntos" data-toggle="collapse">Puntos</a></div>
+                    <div class="panel-body panel-collapse collapse in" id="Puntos">
+                        <div class="grid nopadding">
+                            <div class="col-lg-12 col-xs-12 col-md-12 nopadding">
+                                <div class="col-lg-12 col-xs-12 col-md-12 nopadding">
+                                    <div class="col-lg-5 col-xs-12 col-md-12 common-puntos">
+                                        <span class="section-label">Edad</span>
+                                        <span class="label-value">15</span>
+                                    </div>
+                                    <div class="col-lg-6 col-xs-12 col-md-12 common-puntos">
+                                        <span class="section-label">Antiguedad Domicilio</span>
+                                        <span class="label-value">15</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xs-12 col-md-12 nopadding">
+                                    <div class="col-lg-5 col-xs-12 col-md-12 common-puntos">
+                                        <span class="section-label">Vivienda</span>
+                                        <span class="label-value">15</span>
+                                    </div>
+                                    <div class="col-lg-6 col-xs-12 col-md-12 common-puntos">
+                                        <span class="section-label">Tipo de Empleo</span>
+                                        <span class="label-value">15</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xs-12 col-md-12 nopadding">
+                                    <div class="col-lg-5 col-xs-12 col-md-12 common-puntos">
+                                        <span class="section-label">Antiguedad Laboral</span>
+                                        <span class="label-value">15</span>
+                                    </div>
+                                    <div class="col-lg-6 col-xs-12 col-md-12 common-puntos">
+                                        <span class="section-label">Nivel Endeudamiento</span>
+                                        <span class="label-value">15</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xs-12 col-md-12 nopadding">
+                                    <div class="col-lg-5 col-xs-12 col-md-12 common-puntos">
+                                        <span class="section-label">Creditos MOP</span>
+                                        <span class="label-value">15</span>
+                                    </div>
+                                    <div class="col-lg-6 col-xs-12 col-md-12 common-puntos">
+                                        <span class="section-label">Score</span>
+                                        <span class="label-value">15 (Buro:718)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <% } %>
+
+
         <div class="row">
             <div class="col-lg-12 col-xs-12 col-md-12">
                 <table id="capturas_table" class="display responsive nowrap" style="width: 100%">
@@ -50,21 +172,21 @@
                             </td>
                             <td>ERICK IVAN HERNANDEZ</td>
                             <td class="center">
-                                 <label runat="server" class="pd10 anchor referencia_buro" data-value="1259649805">1259649805</label>
+                                <label runat="server" class="pd10 anchor referencia_buro" data-value="1259649805">1259649805</label>
                             </td>
                             <td class="center">
-                                <span class="pd10 error">65</span>
+                                <a class="pd10 error" href="Capturas.aspx?Ref=1259649805">65</a>
                             </td>
                             <td class="center amarilio">
                                 <span class="color-section pd10">Amarilio</span>
                             </td>
-                            <td style="padding:10px 10px !important;">
+                            <td style="padding: 10px 10px !important;">
                                 <button class="btn btn-default">
                                     <i class="fa fa-paper-plane"></i>
                                     Documentos
                                 </button>
                             </td>
-                            <td style="padding:10px 10px !important;">
+                            <td style="padding: 10px 10px !important;">
                                 <button class="btn btn-default">
                                     <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
                                     Contrato
@@ -86,7 +208,7 @@
         $(document).ready(function () {
 
             $('#capturas_table').DataTable({
-                 "columns": [
+                "columns": [
                     null,
                     null,
                     null,
@@ -95,7 +217,7 @@
                     null,
                     null,
                     null,
-                  ]
+                ]
             });
 
 
@@ -108,7 +230,7 @@
                         "Detalleconsultas.aspx?Ref=" + ref,
                         "DescriptiveWindowName",
                         "resizable,scrollbars,status"
-                  );
+                    );
                 }
             });
         });

@@ -197,7 +197,7 @@ label.anchor {
     font-weight:100;
 }
 
-span.error {
+.error, .error:hover {
     color: red;
 }
 
@@ -283,5 +283,9 @@ span.error {
 
     #MainContent_codigo_postal {
         width: 82%;
+    }
+
+    #puntos-section {
+        width: 100% !important;
     }
 }
