@@ -80,11 +80,20 @@
         .label-value {
             float: right;
         }
+
+        #capturas_table_info, #capturas_table_paginate {
+            display: none;
+        }
+
+        table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, 
+        table.dataTable thead .sorting_desc:after{
+            content: unset !important;
+        }
     </style>
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Solicitud de Informacion</h1>
+                <h1 class="page-header">Solicitud de Información</h1>
             </div>
         </div>
 
@@ -104,7 +113,7 @@
                                         <span class="label-value">15</span>
                                     </div>
                                     <div class="col-lg-6 col-xs-12 col-md-12 common-puntos">
-                                        <span class="section-label">Antiguedad Domicilio</span>
+                                        <span class="section-label">Antigüedad en el Domicilio</span>
                                         <span class="label-value">15</span>
                                     </div>
                                 </div>
@@ -120,7 +129,7 @@
                                 </div>
                                 <div class="col-lg-12 col-xs-12 col-md-12 nopadding">
                                     <div class="col-lg-5 col-xs-12 col-md-12 common-puntos">
-                                        <span class="section-label">Antiguedad Laboral</span>
+                                        <span class="section-label">Antigüedad Laboral</span>
                                         <span class="label-value">15</span>
                                     </div>
                                     <div class="col-lg-6 col-xs-12 col-md-12 common-puntos">
@@ -130,19 +139,18 @@
                                 </div>
                                 <div class="col-lg-12 col-xs-12 col-md-12 nopadding">
                                     <div class="col-lg-5 col-xs-12 col-md-12 common-puntos">
-                                        <span class="section-label">Creditos MOP</span>
+                                        <span class="section-label">Créditos MOP</span>
                                         <span class="label-value">15</span>
                                     </div>
                                     <div class="col-lg-6 col-xs-12 col-md-12 common-puntos">
                                         <span class="section-label">Score</span>
-                                        <span class="label-value">15 (Buro:718)</span>
+                                        <span class="label-value">15 (Buró:718)</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -151,50 +159,54 @@
 
         <div class="row">
             <div class="col-lg-12 col-xs-12 col-md-12">
-                <table id="capturas_table" class="display responsive nowrap" style="width: 100%">
-                    <thead>
-                        <tr>
-                            <th>Fetcha</th>
-                            <th>RFC</th>
-                            <th>Cliente</th>
-                            <th>Referencia Buro</th>
-                            <th>Puntos</th>
-                            <th>Semaforo</th>
-                            <th>Documentos</th>
-                            <th>Generar PDF</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="pd10">26/10/2016 13:09:24</span></td>
-                            <td>
-                                <label runat="server" class="pd10 anchor">HEME951213</label>
-                            </td>
-                            <td>ERICK IVAN HERNANDEZ</td>
-                            <td class="center">
-                                <label runat="server" class="pd10 anchor referencia_buro" data-value="1259649805">1259649805</label>
-                            </td>
-                            <td class="center">
-                                <a class="pd10 error" href="Capturas.aspx?Ref=1259649805">65</a>
-                            </td>
-                            <td class="center amarilio">
-                                <span class="color-section pd10">Amarilio</span>
-                            </td>
-                            <td style="padding: 10px 10px !important;">
-                                <button class="btn btn-default">
-                                    <i class="fa fa-paper-plane"></i>
-                                    Documentos
-                                </button>
-                            </td>
-                            <td style="padding: 10px 10px !important;">
-                                <button class="btn btn-default">
-                                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                    Contrato
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="panel panel-default">
+                    <div class="panel-body panel-collapse collapse in" id="Captura">
+                        <table id="capturas_table" class="display responsive nowrap" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>RFC</th>
+                                    <th>Cliente</th>
+                                    <th>Referencia Buró</th>
+                                    <th>Puntos</th>
+                                    <th>Semáforo</th>
+                                    <th>Documentos</th>
+                                    <th>Generar PDF</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="pd10">26/10/2016 13:09:24</span></td>
+                                    <td>
+                                        <label runat="server" class="pd10 anchor">HEME951213</label>
+                                    </td>
+                                    <td>ERICK IVAN HERNANDEZ</td>
+                                    <td class="center">
+                                        <label runat="server" class="pd10 anchor referencia_buro" data-value="1259649805">1259649805</label>
+                                    </td>
+                                    <td class="center">
+                                        <a class="pd10 error" href="Capturas.aspx?Ref=1259649805">65</a>
+                                    </td>
+                                    <td class="center amarilio">
+                                        <span class="color-section pd10">Amarilio</span>
+                                    </td>
+                                    <td style="padding: 10px 10px !important;">
+                                        <a class="btn btn-default" onclick="openConsultaDocumentos('76','HEME951213','ERICK IVAN HERNANDEZ');">
+                                            <i class="fa fa-file-text-o"></i>
+                                            Documentos
+                                        </a>
+                                    </td>
+                                    <td style="padding: 10px 10px !important;">
+                                        <button class="btn btn-default">
+                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                            Contrato
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -233,6 +245,7 @@
                     );
                 }
             });
+            
         });
     </script>
 </asp:Content>

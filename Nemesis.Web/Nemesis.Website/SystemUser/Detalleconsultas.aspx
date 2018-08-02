@@ -42,12 +42,16 @@
         .panel-body {
             padding: 0px;
         }
+
+        table.dataTable thead th {
+            padding: 10px 6px !important;
+        }
     </style>
 </head>
 <body>
     <div class="col-lg-12 col-md-12 col-sm-12 nopadding main-grid">
         <div class="panel panel-default">
-            <div class="panel-heading"><a href="#dlrecclon" data-toggle="collapse">Consulta De Client</a></div>
+            <div class="panel-heading"><label>Consulta de Cliente</label></div>
             <div class="panel-body panel-collapse collapse in" id="dlrecclon">
                 <div class="grid nopadding">
                     <div class="col-lg-12 col-xs-12 col-md-12 nopadding">

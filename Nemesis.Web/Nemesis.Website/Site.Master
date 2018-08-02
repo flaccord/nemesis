@@ -63,7 +63,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a href="#">
-                        <img src="../Content/Images/logo.png" class="images-section"/>
+                        <img src="../Content/Images/logo.png" class="images-section" />
                     </a>
                 </div>
                 <!-- /.navbar-header -->
@@ -74,7 +74,7 @@
                     <!-- /.dropdown -->
                     <li class="dropdown">
                         <a href="#">
-                            <i class="fa fa-sign-out fa-fw"></i> Cerrar Sesión
+                            <i class="fa fa-sign-out fa-fw"></i>Cerrar Sesión
                         </a>
                         <!-- /.dropdown-user -->
                     </li>
@@ -124,6 +124,18 @@
     <script src="../Scripts/metisMenu.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-    
+    <script type="text/javascript">
+        function openConsultaDocumentos(id, referencia, cliente) {
+            debugger;
+            var windowObjectReference;
+                if (referencia) {
+                    windowObjectReference = window.open(
+                        "/SystemUser/ConsultaGestionaDocumentos.aspx?Refid=" + id + "&rfc=" + referencia +"&cliente="+cliente,
+                        "DescriptiveWindowName",
+                        "resizable,scrollbars,status"
+                    );
+                }
+        }
+    </script>
 </body>
 </html>

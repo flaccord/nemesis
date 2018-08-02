@@ -197,6 +197,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="SystemUser\Capturas.aspx" />
+    <Content Include="SystemUser\ConsultaGestionaDocumentos.aspx" />
     <Content Include="SystemUser\Dashboard.aspx" />
     <Content Include="SystemUser\Detalleconsultas.aspx" />
     <Content Include="SystemUser\hello.aspx" />
@@ -255,6 +256,13 @@
     </Compile>
     <Compile Include="SystemUser\Capturas.aspx.designer.cs">
       <DependentUpon>Capturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser\ConsultaGestionaDocumentos.aspx.cs">
+      <DependentUpon>ConsultaGestionaDocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemUser\ConsultaGestionaDocumentos.aspx.designer.cs">
+      <DependentUpon>ConsultaGestionaDocumentos.aspx</DependentUpon>
     </Compile>
     <Compile Include="SystemUser\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

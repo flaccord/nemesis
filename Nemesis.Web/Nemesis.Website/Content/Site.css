@@ -194,7 +194,8 @@ tr.child td.child ul.dtr-details {
 label.anchor {
     color: #337ab7;
     cursor: pointer;
-    font-weight:100;
+    font-weight: 100;
+    margin-bottom: 0;
 }
 
 .error, .error:hover {
