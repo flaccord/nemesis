@@ -67,14 +67,14 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Agregar Document</h4>
+                    <h4 class="modal-title">Agregar Documento</h4>
                 </div>
                 <div class="modal-body">
                     <input type="file" class="btn btn-file" />
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-info" data-dismiss="modal">Sublr documento</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Subir documento</button>
                 </div>
             </div>
         </div>
